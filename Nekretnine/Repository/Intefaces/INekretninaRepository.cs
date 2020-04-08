@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Nekretnine.Repository.Intefaces
 {
-    interface INekretninaRepository
+    public interface INekretninaRepository
     {
         IEnumerable<Nekretnina> GetAll();
         Nekretnina GetById(int id);
