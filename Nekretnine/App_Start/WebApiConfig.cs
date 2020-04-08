@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
+﻿using Microsoft.Owin.Security.OAuth;
+using Nekretnine.Repository;
+using Nekretnine.Repository.Intefaces;
+using Nekretnine.Resolver;
 using System.Web.Http;
-using Microsoft.Owin.Security.OAuth;
-using Newtonsoft.Json.Serialization;
+using Unity;
+using Unity.Lifetime;
 
 namespace Nekretnine
 {
@@ -25,6 +25,14 @@ namespace Nekretnine
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            // Unity
+            var container = new UnityContainer();
+
+            container.RegisterType<IAgentRepository, AgentRepository>(new HierarchicalLifetimeManager());
+
+            container.RegisterType<INekretninaRepository, NekretninaRepository>(new HierarchicalLifetimeManager());
+            config.DependencyResolver = new UnityResolver(container);
         }
     }
 }
