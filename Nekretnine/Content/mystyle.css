@@ -1,0 +1,59 @@
+﻿table {
+    margin-right: auto;
+    margin-left: auto;
+    border-collapse: collapse;
+    width: auto;
+    table-layout: auto;
+    border-spacing: 6px;
+}
+
+.centrirano {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: yellow;
+    color: black;
+}
+
+.button1 {
+    color: black;
+    background-color: yellow;
+    width: 130px;
+    height: 35px;
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+}
+
+.button3 {
+    width: 130px;
+    height: 35px;
+}
+
+.button2 {
+    color: black;
+    background-color: yellow;
+    width: 170px;
+    height: 35px;
+}
+
+.tabelalog {
+    float: right;
+    width: 55%;
+}
